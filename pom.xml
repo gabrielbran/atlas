@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.orkestic.atlas</groupId>
+    <artifactId>atlas-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <name>Atlas Parent Project</name>
+    <description>
+        <![CDATA[
+        Atlas es una plataforma empresarial de capa media basada en Jakarta EE, 
+        plugins CDI, componentes modulares (OSGi / HK2), EJB y adaptadores JCA 
+        para soportar una arquitectura SOA dinámica, eficiente y escalable 
+        basada en Jakarta EE 11.
+        ]]>
+    </description>
+
+    <organization>
+        <name>Orkestic</name>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>1</id>
+            <name>Gabriel Bran</name>
+            <organization>Orkestic</organization>
+            <roles>
+                <role>Architect</role>
+            </roles>
+            <email>gabrielbran.88@gmail.com</email>
+        </developer>
+    </developers>
+
+</project>
