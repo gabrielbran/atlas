@@ -10,7 +10,18 @@
     <packaging>pom</packaging>
 
     <properties>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <atlas.version>1.0-SNAPSHOT</atlas.version>
+        <atlas.maven-bundle-plugin-version>5.1.9</atlas.maven-bundle-plugin-version>
+        <atlas.maven-compiler-plugin-version>3.13.0</atlas.maven-compiler-plugin-version>
+        <atlas.maven-resources-plugin-version>3.5.0</atlas.maven-resources-plugin-version>
+        <atlas.maven-install-plugin-version>3.1.4</atlas.maven-install-plugin-version>
+        <atlas.maven-deploy-plugin-version>3.1.4</atlas.maven-deploy-plugin-version>
+        <atlas.maven-jar-plugin-version>3.5.1</atlas.maven-jar-plugin-version>
+        <atlas.maven-clean-plugin-version>3.5.0</atlas.maven-clean-plugin-version>
+
     </properties>
 
     <name>Atlas Parent Project</name>
@@ -18,8 +29,7 @@
         <![CDATA[
         Atlas es una plataforma empresarial de capa media basada en Jakarta EE, 
         plugins CDI, componentes modulares (OSGi / HK2), EJB y adaptadores JCA 
-        para soportar una arquitectura SOA dinámica, eficiente y escalable 
-        basada en Jakarta EE 11.
+        para soportar una arquitectura SOA dinámica, eficiente y escalable.
         ]]>
     </description>
 
@@ -39,4 +49,61 @@
         </developer>
     </developers>
 
+    <modules>
+        <!-- Bill Of Materials                      -->
+        <module>bom</module>
+        <!-- Commons Contracts                      -->
+        <module>spec</module>
+        <!-- Application Server Integration Modules -->
+        <module>modules</module>
+        <!-- Integration Adapters                   -->
+        <module>plugins</module>
+        <!-- Administration Projects                -->
+        <module>admin</module>
+        <!-- Platform Testing Projects              -->
+        <module>tests</module>
+        <!-- J2EE Distribution                      -->
+        <module>distribution</module>
+
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>${atlas.maven-bundle-plugin-version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${atlas.maven-compiler-plugin-version}</version>
+                </plugin>
+                
+                <!-- versiones de plugin GlassFish: nucleus/parent/pom.xml -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${atlas.maven-resources-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${atlas.maven-install-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${atlas.maven-deploy-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>${atlas.maven-jar-plugin-version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${atlas.maven-clean-plugin-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

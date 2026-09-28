@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.orkestic.atlas</groupId>
+        <artifactId>atlas-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>bom</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Atlas :: Bill Of Materials</name>
+    <description>
+        <![CDATA[
+        ]]>
+    </description>
+    
+    <properties>
+        
+        <atlas.jakartaee-api>11.0.0</atlas.jakartaee-api>
+        
+        <!-- segun nucleus/parent/pom.xml de GlassFish 8.0.4 -->
+        <atlas.osgi-core>8.0.0</atlas.osgi-core>
+    </properties>
+    
+    <dependencyManagement>
+
+        <dependencies>
+            <!-- Jakarta EE dependencies -->
+            <dependency>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-api</artifactId>
+                <version>${atlas-jakartaee-api}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- OSGi dependencies -->
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>osgi.core</artifactId>
+                <version>${atlas.osgi-core}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+</project>
