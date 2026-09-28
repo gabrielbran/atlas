@@ -22,6 +22,8 @@
         <atlas.maven-jar-plugin-version>3.5.1</atlas.maven-jar-plugin-version>
         <atlas.maven-clean-plugin-version>3.5.0</atlas.maven-clean-plugin-version>
 
+        <atlas.glassfish-ref-version>8.0.4</atlas.glassfish-ref-version>
+
     </properties>
 
     <name>Atlas Parent Project</name>
@@ -82,7 +84,7 @@
                     <version>${atlas.maven-compiler-plugin-version}</version>
                 </plugin>
                 
-                <!-- versiones de plugin GlassFish: nucleus/parent/pom.xml -->
+                <!-- versiones utilizadas por GlassFish: nucleus/parent/pom.xml -->
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>${atlas.maven-resources-plugin-version}</version>

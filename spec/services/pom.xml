@@ -27,6 +27,11 @@
             <artifactId>osgi.core</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -38,7 +43,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>com.orkestic.atlas.modules.Activator</Bundle-Activator>
-                        <Export-Package />
+                        <Export-Package>com.orkestic.atlas.services,com.orkestic.atlas.services.exception</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>

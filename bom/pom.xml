@@ -22,7 +22,7 @@
         
         <atlas.jakartaee-api>11.0.0</atlas.jakartaee-api>
         
-        <!-- segun nucleus/parent/pom.xml de GlassFish 8.0.4 -->
+        <!-- versiones utilizadas por GlassFish: nucleus/parent/pom.xml -->
         <atlas.osgi-core>8.0.0</atlas.osgi-core>
     </properties>
     
@@ -33,7 +33,7 @@
             <dependency>
                 <groupId>jakarta.platform</groupId>
                 <artifactId>jakarta.jakartaee-api</artifactId>
-                <version>${atlas-jakartaee-api}</version>
+                <version>${atlas.jakartaee-api}</version>
                 <scope>provided</scope>
             </dependency>
 
