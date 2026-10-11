@@ -20,20 +20,32 @@
     
     <properties>
         
-        <atlas.jakartaee-api>11.0.0</atlas.jakartaee-api>
-        
+        <atlas.jakartaee-api-version>11.0.0</atlas.jakartaee-api-version>
+        <atlas.jakartaee-xml-api-version>4.0.2</atlas.jakartaee-xml-api-version>
+
         <!-- versiones utilizadas por GlassFish: nucleus/parent/pom.xml -->
-        <atlas.osgi-core>8.0.0</atlas.osgi-core>
+        <atlas.osgi-core-version>8.0.0</atlas.osgi-core-version>
+
+        <atlas.oracle-ojdbc-version>21.23.0.0</atlas.oracle-ojdbc-version>
+
     </properties>
     
     <dependencyManagement>
 
         <dependencies>
+
             <!-- Jakarta EE dependencies -->
             <dependency>
                 <groupId>jakarta.platform</groupId>
                 <artifactId>jakarta.jakartaee-api</artifactId>
-                <version>${atlas.jakartaee-api}</version>
+                <version>${atlas.jakartaee-api-version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>${atlas.jakartaee-xml-api-version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -41,9 +53,18 @@
             <dependency>
                 <groupId>org.osgi</groupId>
                 <artifactId>osgi.core</artifactId>
-                <version>${atlas.osgi-core}</version>
+                <version>${atlas.osgi-core-version}</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- Plugins dependencies -->
+            <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc11</artifactId>
+                <version>${atlas.oracle-ojdbc-version}</version>
+                <scope>provided</scope>
+            </dependency>
+
         </dependencies>
 
     </dependencyManagement>

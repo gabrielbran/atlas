@@ -32,6 +32,10 @@
             <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -42,8 +46,8 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-Activator>com.orkestic.atlas.modules.Activator</Bundle-Activator>
-                        <Export-Package>com.orkestic.atlas.services,com.orkestic.atlas.services.exception</Export-Package>
+                        <Bundle-Activator>com.orkestic.atlas.services.bundle.Activator</Bundle-Activator>
+                        <Export-Package>com.orkestic.atlas.services.*</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
