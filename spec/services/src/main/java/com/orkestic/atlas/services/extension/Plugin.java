@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.orkestic.atlas.services;
+package com.orkestic.atlas.services.extension;
 
 import com.orkestic.atlas.services.exception.PluginException;
+import com.orkestic.atlas.services.expose.Request;
+import com.orkestic.atlas.services.expose.Response;
 
 /**
  *
@@ -13,12 +15,11 @@ import com.orkestic.atlas.services.exception.PluginException;
  */
 public interface Plugin {
 
-    <Response, Request> Response resolve(Request request)
-            throws PluginException;
+    Response resolve(Request request) throws PluginException;
 
     void onPreResolve();
 
-    void onRelease();
+    void onPreRelease();
 
     String getDescriptor();
 
