@@ -12,11 +12,15 @@
     <artifactId>modules</artifactId>
     <packaging>pom</packaging>
 
-    <name>Atlas :: Kernel Modules</name>
+    <name>Atlas :: Modules</name>
     <description>
         <![CDATA[
             
         ]]>
     </description>
+
+    <modules>
+        <module>jakartaee</module>
+    </modules>
 
 </project>

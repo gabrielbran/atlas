@@ -1,2 +1,5 @@
 /spec/model/target/
 /spec/services/target/
+/modules/jakartaee/jakartaee-ear/target/
+/modules/jakartaee/ejb-kernel/target/
+/modules/jakartaee/war-api/target/
