@@ -19,6 +19,18 @@
         ]]>
     </description>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.orkestic.atlas</groupId>
+                <artifactId>bom</artifactId>
+                <version>${atlas.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <modules>
         <module>jakartaee</module>
     </modules>
