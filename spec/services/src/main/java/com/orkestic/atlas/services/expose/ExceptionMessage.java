@@ -1,5 +1,6 @@
 package com.orkestic.atlas.services.expose;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import java.io.Serializable;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -40,7 +41,8 @@ public class ExceptionMessage implements Serializable {
         this.value = value;
     }
 
-    public boolean isSetValue() {
+    @JsonbTransient
+    public Boolean isSetValue() {
         return (this.value != null);
     }
 
@@ -52,7 +54,8 @@ public class ExceptionMessage implements Serializable {
         this.code = value;
     }
 
-    public boolean isSetCode() {
+    @JsonbTransient
+    public Boolean isSetCode() {
         return (this.code != null);
     }
 
