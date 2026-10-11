@@ -1,5 +1,6 @@
 package com.orkestic.atlas.services.expose;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +80,8 @@ public class Request implements Serializable {
         return this.parameters;
     }
 
-    public boolean isSetParameters() {
+    @JsonbTransient
+    public Boolean isSetParameters() {
         return ((this.parameters != null) && (!this.parameters.isEmpty()));
     }
 
@@ -99,7 +101,8 @@ public class Request implements Serializable {
         this.service = value;
     }
 
-    public boolean isSetService() {
+    @JsonbTransient
+    public Boolean isSetService() {
         return (this.service != null);
     }
 
@@ -111,7 +114,8 @@ public class Request implements Serializable {
         this.serviceVersion = value;
     }
 
-    public boolean isSetServiceVersion() {
+    @JsonbTransient
+    public Boolean isSetServiceVersion() {
         return (this.serviceVersion != null);
     }
 
@@ -123,7 +127,8 @@ public class Request implements Serializable {
         this.application = value;
     }
 
-    public boolean isSetApplication() {
+    @JsonbTransient
+    public Boolean isSetApplication() {
         return (this.application != null);
     }
 
@@ -135,11 +140,12 @@ public class Request implements Serializable {
         this.user = value;
     }
 
-    public boolean isSetUser() {
+    @JsonbTransient
+    public Boolean isSetUser() {
         return (this.user != null);
     }
 
-    public String getUid() {
+    public String getUuid() {
         return uuid;
     }
 
@@ -147,7 +153,8 @@ public class Request implements Serializable {
         this.uuid = value;
     }
 
-    public boolean isSetUuid() {
+    @JsonbTransient
+    public Boolean isSetUuid() {
         return (this.uuid != null);
     }
 
@@ -159,7 +166,8 @@ public class Request implements Serializable {
         this.token = value;
     }
 
-    public boolean isSetToken() {
+    @JsonbTransient
+    public Boolean isSetToken() {
         return (this.token != null);
     }
 
@@ -171,7 +179,8 @@ public class Request implements Serializable {
         this.uuidOrigin = value;
     }
 
-    public boolean isSetUuidOrigin() {
+    @JsonbTransient
+    public Boolean isSetUuidOrigin() {
         return (this.uuidOrigin != null);
     }
 
@@ -183,11 +192,12 @@ public class Request implements Serializable {
         this.eisDate = value;
     }
 
-    public boolean isSetEisDate() {
+    @JsonbTransient
+    public Boolean isSetEisDate() {
         return (this.eisDate != null);
     }
 
-    public boolean isAsync() {
+    public Boolean isAsync() {
         if (async == null) {
             return false;
         } else {
@@ -195,11 +205,12 @@ public class Request implements Serializable {
         }
     }
 
-    public void setAsync(boolean value) {
+    public void setAsync(Boolean value) {
         this.async = value;
     }
 
-    public boolean isSetAsync() {
+    @JsonbTransient
+    public Boolean isSetAsync() {
         return (this.async != null);
     }
 
@@ -215,19 +226,21 @@ public class Request implements Serializable {
         this.eisUuid = value;
     }
 
-    public boolean isSetEisUuid() {
+    @JsonbTransient
+    public Boolean isSetEisUuid() {
         return (this.eisUuid != null);
     }
 
-    public int getTimeout() {
+    public Integer getTimeout() {
         return timeout;
     }
 
-    public void setTimeout(int value) {
+    public void setTimeout(Integer value) {
         this.timeout = value;
     }
 
-    public boolean isSetTimeout() {
+    @JsonbTransient
+    public Boolean isSetTimeout() {
         return (this.timeout != null);
     }
 
@@ -243,7 +256,8 @@ public class Request implements Serializable {
         this.remoteAddress = value;
     }
 
-    public boolean isSetRemoteAddress() {
+    @JsonbTransient
+    public Boolean isSetRemoteAddress() {
         return (this.remoteAddress != null);
     }
 

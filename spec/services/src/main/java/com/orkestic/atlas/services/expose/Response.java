@@ -22,7 +22,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "exceptionMessage"
 })
 @XmlRootElement(name = "response")
-@JsonbPropertyOrder({"uid", "correlationId", "entity", "exceptionMessage", "collections"})
+@JsonbPropertyOrder({"uuid", "correlationUuid", "entity", "exceptionMessage", "collections"})
 public class Response implements Serializable {
 
     private final static long serialVersionUID = 1L;
@@ -92,7 +92,7 @@ public class Response implements Serializable {
         return (this.uuid != null);
     }
 
-    public String getCorrelationUuId() {
+    public String getCorrelationUuid() {
         return correlationUuid;
     }
 

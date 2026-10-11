@@ -19,7 +19,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "attributes",
     "collections"
 })
-@JsonbPropertyOrder({"name", "attribute", "collection"})
+@JsonbPropertyOrder({"name", "attributes", "collections"})
 public class Entity implements Serializable {
 
     private final static long serialVersionUID = 1L;
