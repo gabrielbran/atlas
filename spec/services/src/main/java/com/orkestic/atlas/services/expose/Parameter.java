@@ -1,5 +1,6 @@
 package com.orkestic.atlas.services.expose;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import java.io.Serializable;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -47,7 +48,8 @@ public class Parameter implements Serializable {
         this.value = value;
     }
 
-    public boolean isSetValue() {
+    @JsonbTransient
+    public Boolean isSetValue() {
         return (this.value != null);
     }
 
@@ -59,7 +61,8 @@ public class Parameter implements Serializable {
         this.name = value;
     }
 
-    public boolean isSetName() {
+    @JsonbTransient
+    public Boolean isSetName() {
         return (this.name != null);
     }
 
@@ -71,7 +74,8 @@ public class Parameter implements Serializable {
         this.type = value;
     }
 
-    public boolean isSetType() {
+    @JsonbTransient
+    public Boolean isSetType() {
         return (this.type != null);
     }
 
@@ -83,7 +87,8 @@ public class Parameter implements Serializable {
         this.mode = value;
     }
 
-    public boolean isSetMode() {
+    @JsonbTransient
+    public Boolean isSetMode() {
         return (this.mode != null);
     }
 
@@ -95,19 +100,21 @@ public class Parameter implements Serializable {
         this.mask = value;
     }
 
-    public boolean isSetMask() {
+    @JsonbTransient
+    public Boolean isSetMask() {
         return (this.mask != null);
     }
 
-    public int getIndex() {
+    public Integer getIndex() {
         return index;
     }
 
-    public void setIndex(int value) {
+    public void setIndex(Integer value) {
         this.index = value;
     }
 
-    public boolean isSetIndex() {
+    @JsonbTransient
+    public Boolean isSetIndex() {
         return (this.index != null);
     }
 
@@ -115,15 +122,16 @@ public class Parameter implements Serializable {
         this.index = null;
     }
 
-    public boolean isSensitive() {
+    public Boolean isSensitive() {
         return sensitive;
     }
 
-    public void setSensitive(boolean value) {
+    public void setSensitive(Boolean value) {
         this.sensitive = value;
     }
 
-    public boolean isSetSensitive() {
+    @JsonbTransient
+    public Boolean isSetSensitive() {
         return (this.sensitive != null);
     }
 
@@ -131,15 +139,16 @@ public class Parameter implements Serializable {
         this.sensitive = null;
     }
 
-    public boolean isLoggable() {
+    public Boolean isLoggable() {
         return loggable;
     }
 
-    public void setLoggable(boolean value) {
+    public void setLoggable(Boolean value) {
         this.loggable = value;
     }
 
-    public boolean isSetLoggable() {
+    @JsonbTransient
+    public Boolean isSetLoggable() {
         return (this.loggable != null);
     }
 
