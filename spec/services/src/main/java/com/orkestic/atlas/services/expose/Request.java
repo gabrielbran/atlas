@@ -17,9 +17,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "request", propOrder = {
-    "uuid", "service", "service-version", "application", "user", "token",
-    "uuid-origin", "eis-date", "async", "eis-uuid", "timeout",
-    "remote-address", "parameter"
+    "uuid", "service", "serviceVersion", "application", "user", "token",
+    "uuidOrigin", "eisDate", "async", "eisUuid", "timeout",
+    "remoteAddress", "parameter"
 })
 @XmlRootElement(name = "request")
 public class Request implements Serializable {
