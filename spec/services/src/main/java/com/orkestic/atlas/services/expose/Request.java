@@ -6,6 +6,7 @@ import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
@@ -17,9 +18,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "request", propOrder = {
-    "uuid", "service", "service-version", "application", "user", "token",
-    "uuid-origin", "eis-date", "async", "eis-uuid", "timeout",
-    "remote-address", "parameter"
+    "parameters"
 })
 @XmlRootElement(name = "request")
 public class Request implements Serializable {
@@ -66,6 +65,7 @@ public class Request implements Serializable {
     @XmlAttribute(name = "remote-address")
     protected String remoteAddress;
 
+    @XmlElement(name = "parameter")
     @jakarta.json.bind.annotation.JsonbProperty("parameters")
     protected List<Parameter> parameters;
 

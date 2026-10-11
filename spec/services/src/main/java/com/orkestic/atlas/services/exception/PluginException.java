@@ -12,7 +12,7 @@ import jakarta.ejb.ApplicationException;
  * @author gbran
  */
 @ApplicationException(rollback = true)
-public class PluginException extends Throwable {
+public class PluginException extends Exception {
 
     public PluginException(String message) {
         super(message);
