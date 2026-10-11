@@ -23,10 +23,6 @@
     
     <dependencies>
         <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-        </dependency>
-        <dependency>
             <artifactId>ejb-kernel</artifactId>
             <groupId>com.orkestic.atlas</groupId>
             <version>1.0-SNAPSHOT</version>

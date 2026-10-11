@@ -22,9 +22,9 @@
         <atlas.maven-deploy-plugin-version>3.1.4</atlas.maven-deploy-plugin-version>
         <atlas.maven-jar-plugin-version>3.5.1</atlas.maven-jar-plugin-version>
         <atlas.maven-clean-plugin-version>3.5.0</atlas.maven-clean-plugin-version>
-        <atlas.maven-war-plugin>3.3.1</atlas.maven-war-plugin>
-        <atlas.maven-ejb-plugin>3.2.1</atlas.maven-ejb-plugin>
-        <atlas.maven-ear-plugin>3.3.0</atlas.maven-ear-plugin>
+        <atlas.maven-war-plugin-version>3.3.1</atlas.maven-war-plugin-version>
+        <atlas.maven-ejb-plugin-version>3.2.1</atlas.maven-ejb-plugin-version>
+        <atlas.maven-ear-plugin-version>3.4.0</atlas.maven-ear-plugin-version>
 
         <atlas.glassfish-ref-version>8.0.4</atlas.glassfish-ref-version>
 
@@ -86,15 +86,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${atlas.maven-compiler-plugin-version}</version>
-                    <configuration>
-                        <source>21</source>
-                        <target>21</target>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>${atlas.maven-war-plugin}</version>
+                    <version>${atlas.maven-war-plugin-version}</version>
                     <configuration>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
@@ -102,7 +98,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-ejb-plugin</artifactId>
-                    <version>${atlas.maven-ejb-plugin}</version>
+                    <version>${atlas.maven-ejb-plugin-version}</version>
                     <configuration>
                         <ejbVersion>4.0</ejbVersion>
                     </configuration>
@@ -110,10 +106,11 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-ear-plugin</artifactId>
-                    <version>${atlas.maven-ear-plugin}</version>
+                    <version>${atlas.maven-ear-plugin-version}</version>
                     <configuration>
-                        <version>6</version>
+                        <version>11</version>
                         <defaultLibBundleDir>lib</defaultLibBundleDir>
+                        <generateApplicationXml>false</generateApplicationXml>
                         <outputFileNameMapping>@{artifactId}@@{dashClassifier?}@.@{extension}@</outputFileNameMapping>
                     </configuration>
                 </plugin>
